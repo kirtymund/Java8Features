@@ -1,8 +1,8 @@
-package com.learnJava.optional;
+package Optional;
 
-import com.learnJava.data.Bike;
-import com.learnJava.data.Student;
-import com.learnJava.data.StudentDataBase;
+import StudentData.Bike;
+import StudentData.Student;
+import StudentData.StudentDataBase;
 
 import java.util.Optional;
 
@@ -12,7 +12,7 @@ public class OptionalMapFlatMapExample {
     public static void optionalFilter(){
 
         Optional<Student> studentOptional =
-            Optional.ofNullable(StudentDataBase.studentSupplier.get()); //Optional<Student>
+            Optional.ofNullable(StudentDataBase.student.get()); //Optional<Student>
 
         studentOptional.
                 filter(student -> student.getGpa()>=4.0)
@@ -22,7 +22,7 @@ public class OptionalMapFlatMapExample {
     //map
     public static  void optionalMap(){
         Optional<Student> studentOptional =
-                Optional.ofNullable(StudentDataBase.studentSupplier.get()); //Optional<Student>
+                Optional.ofNullable(StudentDataBase.student.get()); //Optional<Student>
 
         if(studentOptional.isPresent()){
             Optional<String> stringOptional = studentOptional
@@ -38,7 +38,7 @@ public class OptionalMapFlatMapExample {
     public static void optionalFlatMap(){
 
         Optional<Student> studentOptional =
-                Optional.ofNullable(StudentDataBase.studentSupplier.get()); //Optional<Student>
+                Optional.ofNullable(StudentDataBase.student.get()); //Optional<Student>
 
         Optional<String> name = studentOptional
                 .filter(student -> student.getGpa()>=3.5)

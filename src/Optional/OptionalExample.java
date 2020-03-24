@@ -1,9 +1,9 @@
-package com.learnJava.optional;
 
-import com.learnJava.data.Student;
-import com.learnJava.data.StudentDataBase;
+package Optional;
 
 import java.util.Optional;
+
+import StudentData.Student;
 
 public class OptionalExample {
 
